@@ -40952,13 +40952,13 @@ pre {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex;
+  justify-content: flex-start !important;
   margin-left: 50px;
   gap: 50px;
   margin: 0 auto;
   background: url("../images/login/MultiBelleza_Logo.jpg");
   background-position: right center;
-  background-size: 70%;
+  background-size: 10%;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
