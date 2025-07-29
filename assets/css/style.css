@@ -40952,10 +40952,16 @@ pre {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex;
+  margin-left: 50px;
+  gap: 50px;
   margin: 0 auto;
-  background: url("../images/login/avyna_bg.jpg");
-  background-position: center;
+  background: url("../images/login/MultiBelleza_Logo.jpg");
+  background-position: right center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
   padding: 30px 12px;
 }
 .login-card.login-bg {
