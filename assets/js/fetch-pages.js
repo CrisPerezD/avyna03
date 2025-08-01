@@ -1,23 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Buscar todos los enlaces con data-page
-    document.querySelectorAll("[data-page]").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault(); // Evita navegación completa
-            const page = this.getAttribute("data-page");
+document.addEventListener("click", function (e) {
+    // Buscar si el click fue en un elemento con data-page o dentro de él
+    const link = e.target.closest("[data-page]");
+    if (!link) return; // Si no es un data-page, salir
 
-            // Mostrar en consola para depuración
-            console.log("Cargando página:", page);
+    e.preventDefault(); // Evita navegación completa
+    const page = link.getAttribute("data-page");
 
-            // Usar fetch para traer el contenido
-            fetch(page)
-                .then(response => {
-                    if (!response.ok) throw new Error("Error al cargar: " + page);
-                    return response.text();
-                })
-                .then(html => {
-                    document.getElementById("content-area").innerHTML = html;
-                })
-                .catch(err => console.error(err));
-        });
-    });
+    console.log("Cargando página:", page); // Para depuración
+
+    fetch(page)
+        .then(response => {
+            if (!response.ok) throw new Error("Error al cargar: " + page);
+            return response.text();
+        })
+        .then(html => {
+            document.getElementById("content-area").innerHTML = html;
+
+            // Si usas feather icons, refrescar iconos
+            if (window.feather) {
+                feather.replace();
+            }
+        })
+        .catch(err => console.error(err));
 });
