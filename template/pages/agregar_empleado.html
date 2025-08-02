@@ -13,10 +13,10 @@
     }
 
     /* El ancho de todos los h4 será igual al del más largo */
-    .form-row h4 {
+    .form-row h5 {
         flex: 0 0 auto;
         /* No se expande */
-        min-width: 180px;
+        min-width: 160px;
         /* Ajusta según el más largo */
         margin: 0;
         /* Elimina márgenes extra */
@@ -47,16 +47,16 @@
             <div class="card-body">
 
                 <!-- Nombre y Apellidos -->
-                <div class="mb-3 form-row">
+                <div class="form-row">
                     <div class="row mb-3">
                         <div class="col-md-4 d-flex align-items-center">
                             <h5 class="me-3 mb-0">Nombre:</h5>
-                            <input type="text" id="nombre" class="form-control border-success">
+                            <input type="text" id="nombre" class="form-control">
                         </div>
                         <div class="col-md-4 d-flex align-items-center">
                             <h5 class="me-3 mb-0">Apellido Paterno:</h5>
                             <input type="text" id="apellidoPaterno" class="form-control">
-                        </div>
+                        </div><br>
                         <div class="col-md-4 d-flex align-items-center">
                             <h5 class="me-3 mb-0">Apellido Materno:</h5>
                             <input type="text" id="apellidoMaterno" class="form-control">
@@ -76,7 +76,7 @@
                     <h5 class="me-3 mb-0">Fecha de Nacimiento:</h5>
                     <input type="date" id="fechaNacimiento" class="form-control">
                     <h5 class="me-3 mb-0">Nacionalidad:</h5>
-                    <input type="text" id="nacionalidad" class="form-control">                    
+                    <input type="text" id="nacionalidad" class="form-control">
                 </div>
                 <!-- Género y Estado Civil -->
                 <div class="mb-3 form-row">
@@ -110,25 +110,92 @@
             </div>
             <div class="card-body">
 
-                <!-- Imagen -->
+                <!-- Teléfono Móvil y Teléfono Fijo -->
                 <div class="mb-3 form-row">
-                    <h4 class="me-3 mb-0">Imagen:</h4>
-                    <input type="file" id="imagen" class="form-control">
+                    <h5 class="me-3 mb-0">Teléfono Móvil:</h5>
+                    <input type="text" id="telefonoMovil" class="form-control">
+                    <h5 class="me-3 mb-0">Teléfono Fijo:</h5>
+                    <input type="text" id="telefonoFijo" class="form-control">
                 </div>
 
-                <!-- Orden -->
+                <!-- Email -->
                 <div class="mb-3 form-row">
-                    <h4 class="me-3 mb-0">Orden:</h4>
-                    <div class="d-flex flex-column">
-                        <input type="number" id="orden" class="form-control w-auto" value="0">
-                        <small class="text-muted">Orden de aparición</small>
+                    <h5 class="me-3 mb-0">Correo Electrónico:</h5>
+                    <div class="col-md-4">
+                        <input type="email" id="correo" class="form-control" value="" style="max-width: 350px;">
+                        <small class="text-muted">Ejemplo: usuario@ejemplo.com</small>
                     </div>
                 </div>
 
-                <!-- Activa -->
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="activa" checked>
-                    <label for="activa" class="form-check-label">Activa</label>
+                <!-- Calle, No. Exterior y No. Interior -->
+                <div class="mb-3 form-row">
+                    <div class="row mb-3">
+                        <div class="col-md-4 d-flex align-items-center">
+                            <h5 class="me-3 mb-0">Calle:</h5>
+                            <input type="text" id="calle" class="form-control">
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <h5 class="me-3 mb-0">No. Exterior:</h5>
+                            <input type="text" id="noExterior" class="form-control">
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <h5 class="me-3 mb-0">No. Interior:</h5>
+                            <input type="text" id="noInterior" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <!-- Colonia y C.P. -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Colonia:</h5>
+                    <input type="text" id="colonia" class="form-control">
+                    <h5 class="me-3 mb-0">Código Postal:</h5>
+                    <input type="text" id="cp" class="form-control">
+                </div>
+                <!-- Ciudad -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0" style="min-width: 160px;">Ciudad:</h5>
+                    <div class="col-md-4">
+                        <input type="text" id="ciudad" class="form-control">
+                    </div>
+                </div>
+                <!-- Estado -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0" style="min-width: 160px;">Estado:</h5>
+                    <select id="estado" class="form-select" style="max-width: 330px;">
+                        <option value="">Seleccione un estado</option>
+                        <option value="AGU">Aguascalientes</option>
+                        <option value="BCN">Baja California</option>
+                        <option value="BCS">Baja California Sur</option>
+                        <option value="CAM">Campeche</option>
+                        <option value="CHP">Chiapas</option>
+                        <option value="CHH">Chihuahua</option>
+                        <option value="COA">Coahuila</option>
+                        <option value="COL">Colima</option>
+                        <option value="CMX">Ciudad de México</option>
+                        <option value="DUR">Durango</option>
+                        <option value="GUA">Guanajuato</option>
+                        <option value="GRO">Guerrero</option>
+                        <option value="HID">Hidalgo</option>
+                        <option value="JAL">Jalisco</option>
+                        <option value="MEX">México</option>
+                        <option value="MIC">Michoacán</option>
+                        <option value="MOR">Morelos</option>
+                        <option value="NAY">Nayarit</option>
+                        <option value="NLE">Nuevo León</option>
+                        <option value="OAX">Oaxaca</option>
+                        <option value="PUE">Puebla</option>
+                        <option value="QUE">Querétaro</option>
+                        <option value="ROO">Quintana Roo</option>
+                        <option value="SLP">San Luis Potosí</option>
+                        <option value="SIN">Sinaloa</option>
+                        <option value="SON">Sonora</option>
+                        <option value="TAB">Tabasco</option>
+                        <option value="TAM">Tamaulipas</option>
+                        <option value="TLA">Tlaxcala</option>
+                        <option value="VER">Veracruz</option>
+                        <option value="YUC">Yucatán</option>
+                        <option value="ZAC">Zacatecas</option>
+                    </select>
                 </div>
 
             </div>
