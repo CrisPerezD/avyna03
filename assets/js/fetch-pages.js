@@ -1,12 +1,11 @@
 document.addEventListener("click", function (e) {
-    // Buscar si el click fue en un elemento con data-page o dentro de él
     const link = e.target.closest("[data-page]");
-    if (!link) return; // Si no es un data-page, salir
+    if (!link) return;
 
-    e.preventDefault(); // Evita navegación completa
+    e.preventDefault();
     const page = link.getAttribute("data-page");
 
-    console.log("Cargando página:", page); // Para depuración
+    console.log("Cargando página:", page);
 
     fetch(page)
         .then(response => {
@@ -20,6 +19,26 @@ document.addEventListener("click", function (e) {
             if (window.feather) {
                 feather.replace();
             }
+
+            // 🔹 Si la página cargada es el formulario de empleado
+            if (page.includes("formulario-empleado.html")) {
+                inicializarBotonHoy(); // Aquí sí inicializamos el botón
+            }
         })
         .catch(err => console.error(err));
 });
+
+function inicializarBotonHoy() {
+    const btnHoy = document.getElementById("btnHoy");
+    const fechaIngreso = document.getElementById("fechaIngreso");
+
+    if (btnHoy && fechaIngreso) {
+        btnHoy.addEventListener("click", function () {
+            const hoy = new Date();
+            const yyyy = hoy.getFullYear();
+            const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+            const dd = String(hoy.getDate()).padStart(2, '0');
+            fechaIngreso.value = `${yyyy}-${mm}-${dd}`;
+        });
+    }
+}
