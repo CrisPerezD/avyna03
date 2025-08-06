@@ -1,11 +1,20 @@
-<h2>Gestión de Estilistas</h2>
+<style>
+    /* Reducir ancho de la primera columna */
+    #tablaDocumentos th:first-child,
+    #tablaDocumentos td:first-child {
+        width: 40px; /* ajustar según se requiera */
+        text-align: center;
+    }
+</style>
+
+<h2>Gestión de Servicios</h2>
 
 <div class="container-fluid">
     <div class="card shadow-sm border-0 rounded-4 p-3">
 
         <!-- Título de la tarjeta -->
         <div class="card-header bg-primary text-white rounded-3 mb-4">
-            <h3 class="fw-bold mb-0">Selecciona el Estilista a modificar</h3>
+            <h3 class="fw-bold mb-0">Selecciona el Servicio a modificar</h3>
         </div>
 
         <!-- Barra de búsqueda y botones -->
@@ -18,7 +27,7 @@
 
             <div class="d-flex gap-2">
                 <a href="#" data-page="pages/documentos.html" class="btn btn-primary" id="btnAgregar">
-                    <i data-feather="plus-square"></i> Agregar Estilista
+                    <i data-feather="plus-square"></i> Agregar Servicio
                 </a>
             </div>
         </div>
@@ -37,65 +46,37 @@
                 <button class="btn btn-primary">Aplicar</button>
             </div>
 
-            <!-- Tabla para mostrar Estilistas -->
+            <!-- Tabla para mostrar servicios -->
             <div class="table-responsive">
                 <table id="tablaDocumentos" class="table table-bordered table-hover align-middle">
                     <thead class="table-light">
                         <tr>
                             <th><input type="checkbox"></th>
-                            <th>ID AVYNA</th>
-                            <th>NOMBRE COMPLETO</th>
-                            <th>ZONA</th>
-                            <th>FRECUENCIA DE VISITA</th>
-                            <th>MAPA</th>                            
+                            <th>NOMBRE</th>                                        
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><a href="#">32</a></td>
-                            <td>222 22121 2121</td>
-                            <td>z1 - Zona1</td>
-                            <td>-</td>
-                            <td>Ubicación</td>                            
+                            <td><a href="#">Tintes y efectos de color</a></td>                           
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><a href="#">23232</a></td>
-                            <td>Desconocido Desconocido</td>
-                            <td>-</td>
-                            <td>Semana par</td>
-                            <td observe>Sin Ubicación</td>                            
+                            <td><a href="#">Corte de dama</a></td>                            
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><a href="#">34</a></td>
-                            <td>Roberto Amadeo Desconocido Capistrán</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td observe>Sin Ubicación</td>
+                            <td><a href="#">Tintes y efectos de color</a></td>                            
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td><a href="#">33</a></td>
-                            <td>Roberto Amadeo Hernández Capistrán</td>
-                            <td>z1 - Zona1</td>
-                            <td>-</td>
-                            <td observe>Sin Ubicación</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td><a href="#">35</a></td>
-                            <td>Roberto Amadeo Desconocido Capistrán</td>
-                            <td>z1 - Zona1</td>
-                            <td>-</td>
-                            <td observe>Sin Ubicación</td>
-                        </tr>
+                            <td><a href="#">Corte de caballero</a></td>                            
+                        </tr>                        
                     </tbody>
                 </table>
                 <!-- Contador -->
                 <div class="mt-2 fw-bold text-primary">
-                    <span id="contadorFilas"></span> Estilistas
+                    <span id="contadorFilas"></span> Servicios
                 </div>
             </div>
         </div>
