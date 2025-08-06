@@ -30,6 +30,12 @@
         max-width: 300px;
     }
 
+    /* Espacio ligero entre botones dentro del btn-group */
+    .btn-group .btn:not(:first-child) {
+        margin-left: 4px !important;
+        /* Ajusta el valor si quieres más o menos espacio */
+    }
+
     /* Quitar línea en el último elemento */
     .form-row:last-child {
         border-bottom: none;
@@ -122,18 +128,20 @@
                         <option>Hogar</option>
                         <option>Juguetes</option>
                     </select>
-                    <button type="button" class="btn btn-outline-secondary ms-2" title="Editar">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-success ms-1" title="Agregar">
-                        <i class="bi bi-plus-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-danger ms-1" title="Eliminar">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-info ms-1" title="Ver">
-                        <i class="bi bi-eye"></i>
-                    </button>
+                    <div class="btn-group ms-0">
+                        <button type="button" class="btn btn-outline-secondary ms-0" title="Editar">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-success ms-0" title="Agregar">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger ms-0" title="Eliminar">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info ms-0" title="Ver">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Marca -->
@@ -146,18 +154,20 @@
                         <option>LG</option>
                         <option>Sony</option>
                     </select>
-                    <button type="button" class="btn btn-outline-secondary ms-2" title="Editar">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-success ms-1" title="Agregar">
-                        <i class="bi bi-plus-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-danger ms-1" title="Eliminar">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-info ms-1" title="Ver">
-                        <i class="bi bi-eye"></i>
-                    </button>
+                    <div class="btn-group ms-0">
+                        <button type="button" class="btn btn-outline-secondary ms-0" title="Editar">
+                            <i class="bi bi-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-success ms-0" title="Agregar">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger ms-0" title="Eliminar">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-info ms-0 " title="Ver">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -171,8 +181,7 @@
                     <div class="mb-3 form-row">
                         <h5 class="me-3 mb-0">Stock:</h5>
                         <div class="col-md-5">
-                            <input type="number" id="stock" class="form-control"
-                                placeholder="Ingrese la cantidad en stock" required>
+                            <input type="number" id="stock" class="form-control" value="0" required>
                         </div>
                     </div>
 
@@ -185,7 +194,7 @@
                     <!-- Puntos -->
                     <div class="mb-3 form-row">
                         <h5 class="me-3 mb-0">Puntos:</h5>
-                        <input type="number" class="form-control" id="puntos" rows="3"></input>
+                        <input type="number" class="form-control" id="puntos" rows="3" value="0"></input>
                     </div>
 
                 </div>
