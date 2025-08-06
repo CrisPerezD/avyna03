@@ -16,7 +16,7 @@
     .form-row h5 {
         flex: 0 0 auto;
         /* No se expande */
-        min-width: 160px;
+        min-width: 165px;
         /* Ajusta según el más largo */
         margin: 0;
         /* Elimina márgenes extra */
@@ -198,6 +198,71 @@
                     </select>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Contacto de Emergencia -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white rounded-3 mb-4">
+                <h4 class="fw-bold mb-0">Contacto de Emergencia</h4>
+            </div>
+            <div class="card-body">
+
+                <!-- Nombre de Contacto Emergencia -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Nombre de Contacto:</h5>
+                    <input type="text" id="nombreContactoEmergencia" class="form-control" style="max-width: 300px;">                   
+                </div>
+
+                <!-- Relación -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Relación:</h5>
+                    <input type="text" id="relacionContactoEmergencia" class="form-control" style="max-width: 300px;"> 
+                </div>
+
+                <!-- Teléfono Contacto de Emergencia -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Teléfono de Contacto:</h5>
+                    <input type="text" id="telefonoContactoEmergencia" class="form-control" style="max-width: 300px;"> 
+                </div>
+
+                <!-- Dirección -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Dirección:</h5>
+                    <textarea type="text" id="direccion" class="form-control" style="max-width: 550px;"></textarea>                
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacto de Emergencia -->
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white rounded-3 mb-4">
+                <h4 class="fw-bold mb-0">Datos Bancarios</h4>
+            </div>
+            <div class="card-body">
+
+                <!-- Banco -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Banco:</h5>
+                    <select id="banco" class="form-select" style="max-width: 300px;">
+                        <option value="">Selecciona un banco</option>
+                        <option value="BANAMEX">Banamex</option>
+                        <option value="BBVA">BBVA</option>
+                        <option value="HSBC">HSBC</option>
+                        <option value="SANTANDER">Santander</option>
+                        <option value="BANORTE">Banorte</option>
+                    </select>
+                </div>
+                <!-- Número de Cuenta -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">Número de Cuenta:</h5>
+                    <input type="number" id="numeroCuenta" class="form-control" style="max-width: 300px;"> 
+                </div>
+                <!-- CLABE Interbancaria -->
+                <div class="mb-3 form-row">
+                    <h5 class="me-3 mb-0">CLABE Interbancaria:</h5>
+                    <input type="number" id="clabeInterbancaria" class="form-control" style="max-width: 300px;"> 
+                </div>
             </div>
         </div>
 
