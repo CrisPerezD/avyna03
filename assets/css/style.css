@@ -11867,11 +11867,13 @@ textarea.form-control-lg {
   --white: #ffffff;
   --black: #000000;
   --body-font-color: #292929;
-  --font-color: #aaa3a0;
+  /* --font-color: #aaa3a0; */
+  --font-color: #ffffff;
   --shape-border: #e5e5e5;
   --scrollbar-color: #aeaeae;
   --light-border: #dceee6;
-  --theme-default: #308e87;
+  /* --theme-default: #308e87; */
+  --theme-default: #D982AD;
   --theme-secondary: #f39159;
   --body-color: #f9f7f6;
   --primary-color: #308e87;
@@ -27178,7 +27180,8 @@ input::-webkit-inner-spin-button {
   height: 100vh;
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
   z-index: 3;
-  background: var(--white);
+  /* background: var(--white); */
+  background: var(--dark);
   transition: 0.5s all;
 }
 @media (max-width: 991.98px) {
@@ -27601,7 +27604,8 @@ input::-webkit-inner-spin-button {
 .page-sidebar .sidebar-submenu a {
   position: relative;
   letter-spacing: 0.5px;
-  color: var(--gray-700);
+  /* color: var(--gray-700); */
+  color: var(--bs-danger-border-subtle);
   padding: 4px;
   display: block;
   padding-left: 15px;
@@ -27657,7 +27661,8 @@ input::-webkit-inner-spin-button {
   width: 100%;
 }
 .sidebar-menu .sidebar-list.active .sidebar-link {
-  background-color: rgba(48, 142, 135, 0.2);
+  /* background-color: rgba(48, 142, 135, 0.2); */
+  background-color: rgba(255, 153, 203, 0.2);
   color: var(--theme-default);
   border-bottom: none;
 }
@@ -27763,10 +27768,12 @@ input::-webkit-inner-spin-button {
 .sidebar-menu .sidebar-list h6, .sidebar-menu .sidebar-list .h6 {
   font-weight: 600;
   font-size: 16px;
+  color: var(--bs-white);
 }
 .sidebar-menu .sidebar-title {
   padding: 9px 0 9px 5px;
-  color: var(--light-gray-color);
+  /* color: var(--light-gray-color); */
+  color: var(--bs-white);
   font-size: 14px;
   text-transform: uppercase;
 }
