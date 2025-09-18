@@ -11867,6 +11867,7 @@ textarea.form-control-lg {
   --white: #ffffff;
   --black: #000000;
   --body-font-color: #292929;
+  /* --body-font-color: #ffffff; */
   /* --font-color: #aaa3a0; */
   --font-color: #ffffff;
   --shape-border: #e5e5e5;
@@ -27668,6 +27669,10 @@ input::-webkit-inner-spin-button {
 }
 .sidebar-menu .sidebar-list.active .sidebar-link .stroke-icon {
   color: var(--theme-default);
+}
+.color-de-iconos-sidebar {
+  stroke: white !important;
+  fill: white !important;
 }
 .sidebar-menu .sidebar-list.active .sidebar-link .iconly-Arrow-Right-2 {
   transform: rotate(90deg) !important;
