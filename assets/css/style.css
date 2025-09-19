@@ -11877,6 +11877,8 @@ textarea.form-control-lg {
   --theme-default: #D982AD;
   --theme-secondary: #f39159;
   --body-color: #f9f7f6;
+  --body-color-pink: #f0daeb;
+  --body-color-dark: #f9f7f6;
   --primary-color: #308e87;
   --secondary-color: #f39159;
   --success-color: #3eb95f;
@@ -14015,7 +14017,7 @@ input:focus {
   stroke: var(--body-font-color);
 }
 .dark-only .login-card.login-bg {
-  background: var(--body-color) !important;
+  background: var(--body-color-pink) !important;
 }
 .dark-only .setting-sidebar {
   background-color: var(--body-color) !important;
@@ -40964,17 +40966,21 @@ pre {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start !important;
-  margin-left: 50px;
-  gap: 50px;
-  margin: 0 auto;
-  background: url("../images/login/MultiBelleza_Logo.jpg");
+  justify-content: center !important;
+  align-items: center;
+  /* margin-left: 50px; */
+  gap: 10px;
+  margin: 0;
+  /* padding: 30px 12px; */
+  padding: 5px 0px;
+  /* background: url("../images/login/MultiBelleza_Logo.jpg"); */
   background-position: right center;
   background-size: 10%;
   background-repeat: no-repeat;
+  background-color: var(--body-color-pink);
   position: relative;
   z-index: 1;
-  padding: 30px 12px;
+  
 }
 .login-card.login-bg {
   background: rgba(48, 142, 135, 0.06) !important;
